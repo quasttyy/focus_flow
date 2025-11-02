@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package task_service;
+
+option go_package = "focus_flow/task-service/proto";
+
+// Создать задачу
+message CreateTaskReq {
+    string title = 1;
+    string description = 2;
+}
+
+message CreateTaskResp {
+    int64 id = 1;
+}
+
+// Получить задачи
+message ListTasksReq {
+    string user_id = 1;
+}
+
+message Task {
+    int64 id = 1;
+    string user_id = 2;
+    string title = 3;
+    string description = 4;
+    bool done = 5;
+}
+
+message ListTasksResp {
+    repeated Task tasks = 1;
+}
+
+// Отметить задачу выполненной
+message CompleteTaskReq {
+    int64 id = 1;
+}
+
+message CompleteTaskResp {
+    bool success = 1;
+}

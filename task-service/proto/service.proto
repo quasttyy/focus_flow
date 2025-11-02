@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package task_service;
+
+option go_package = "focus_flow/task-service/proto";
+
+import "messages.proto";
+
+service TaskService {
+    // Создать задачу
+    rpc CreateTask(CreateTaskReq) returns (CreateTaskResp) {}
+    // Получить задачи
+    rpc ListTasks(ListTasksReq) returns (ListTasksResp) {}
+    // Отметить задачу выполненной
+    rpc CompleteTask (CompleteTaskReq) returns (CompleteTaskResp) {}
+}
