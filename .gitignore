@@ -1,0 +1,121 @@
+# --- Go build artifacts ---
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.log
+*.pid
+
+# Go coverage / benchmarks
+*.coverprofile
+*.pprof
+
+# Local binaries
+bin/
+build/
+dist/
+tmp/
+
+# --- Dependency directories ---
+vendor/
+.env
+.env.*
+!env.example
+
+# --- IDE and OS files ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Proto / gRPC generated code ---
+*.pb.go
+*.gw.go
+*.swagger.json
+*.swagger.yaml
+
+# (if you want to commit generated code, remove these lines above)
+
+# --- Docker ---
+docker-compose.override.yml
+*.tar
+*.bak
+*.tmp
+*.pid
+*.seed
+*.lock
+*.log
+.env.docker
+.env.local
+
+# --- Database and cache data ---
+pgdata/
+postgres-data/
+redis-data/
+data/
+db_data/
+*.db
+*.sqlite
+
+# --- Kafka/Zookeeper volumes ---
+kafka-data/
+zookeeper-data/
+
+# --- Migrations temp files ---
+migrations/.history/
+migrations/*.tmp
+migrations/*.backup
+
+# --- Test artifacts ---
+/coverage/
+/test-results/
+*.testdata
+*.snap
+
+# --- Kubernetes ---
+*.yaml~
+*.yml~
+k8s/*.bak
+helm-chart/output/
+
+# --- CI/CD ---
+/build/
+.github/workflows/tmp/
+.gitlab-ci-local/
+*.retry
+ci-cache/
+.coverage
+.nosync
+
+# --- Logs and cache ---
+logs/
+*.log
+*.cache
+.cache/
+*.tmp
+/tmp/
+*.bak
+
+# --- Frontend (if later added) ---
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
+
+# --- Generated proto intermediates ---
+/third_party/googleapis/
+/api/proto/google/
+/api/proto/gen/
+
+# --- Misc ---
+**/__pycache__/
+**/.pytest_cache/
+*.iml
+*.orig
+*.rej
