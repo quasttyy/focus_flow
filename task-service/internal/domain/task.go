@@ -10,25 +10,18 @@ type Task struct {
 }
 
 var (
-	ErrTitleEmpty = fmt.Errorf("title is empty")
-	ErrDescriptionEmpty = fmt.Errorf("description is empty")
+	ErrEmptyTitle = fmt.Errorf("title is empty")
 )
 
 func CreateTask(
-	id int,
 	title string,
 	description string,
 ) (*Task, error) {
-	// Провалидируем данные
 	if title == "" {
-		return nil, ErrTitleEmpty
-	}
-	if description == "" {
-		return nil, ErrDescriptionEmpty
+		return nil, ErrEmptyTitle
 	}
 
 	return &Task{
-		ID: id,
 		Title: title,
 		Description: description,
 		Done: false,
